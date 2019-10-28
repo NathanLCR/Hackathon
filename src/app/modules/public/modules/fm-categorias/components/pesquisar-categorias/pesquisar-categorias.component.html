@@ -1,0 +1,31 @@
+<app-container-padrao titulo="Categorias">
+  <div class="d-flex flex-row-reverse success">
+    <button class="d-flex flex-row-reverse add-btn">
+      <p class="text-primary">ADICIONAR</p>
+      <i class="material-icons text-primary">add_circle</i>
+    </button>
+  </div>
+  <table class="table table-striped bg-light text-center">
+      <thead>
+        <tr>
+          <th scope="col">Nome</th>
+          <th scope="col">Opções</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let categoria of categorias">
+          <td>{{categoria.nome}}</td>
+          <td>
+            <button class="btn btn-danger mr-2"><i class="material-icons">
+              delete
+              </i></button>
+            <button class="btn btn-primary btn-sm">
+              <i class="material-icons">
+              build
+              </i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+  </table>
+</app-container-padrao>

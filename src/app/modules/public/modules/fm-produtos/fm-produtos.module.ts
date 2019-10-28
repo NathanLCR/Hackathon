@@ -4,14 +4,18 @@ import { SharedComponentsModule } from 'src/app/shared/shared-components/shared-
 import { PesquisarProdutosComponent } from './components/pesquisar-produtos/pesquisar-produtos.component';
 import { FmProdutosRoutingModule } from './fm-produtos-routing.module';
 import { ProdutosService } from './services/produtos.service';
+import { CadastrarProdutoComponent } from './components/cadastrar-produto/cadastrar-produto.component';
+import { ExibirProdutosComponent } from './components/exibir-produtos/exibir-produtos.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [PesquisarProdutosComponent],
+  declarations: [PesquisarProdutosComponent, CadastrarProdutoComponent, ExibirProdutosComponent],
   imports: [
     CommonModule,
     FmProdutosRoutingModule,
-    SharedComponentsModule
+    SharedComponentsModule,
+    ReactiveFormsModule
   ],
   providers: [
     ProdutosService

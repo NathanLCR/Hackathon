@@ -1,9 +1,15 @@
-<nav class="navbar navbar-dark bg-dark mb-5">
+<nav class="navbar navbar-dark bg-dark mb-5 d-flex justify-content-between">
     <a class="navbar-brand" href="#">
         <img src="favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
         Hackathon - Unifacisa
     </a>
+    <div class="d-flex navbar-nav">
+            <a href="#/" class="nav-item"><i class="material-icons">home</i></a>
+
+          <a href="#/" class="nav-item"><i class="material-icons">info</i></a>
+
+    </div>
 </nav>
 <div class="container">
-    <router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 </div>

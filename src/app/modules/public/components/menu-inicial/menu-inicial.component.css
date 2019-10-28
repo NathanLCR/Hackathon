@@ -1,0 +1,18 @@
+.menu-inicial-btn{
+  width: 300px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 40px;
+  color: black;
+}
+.menu-inicial{
+  padding-top: 50px;
+  margin-bottom: 100px;
+
+}
+.menu-inicial > a:hover{
+  text-decoration: none;
+  font-size: 50px;
+}
