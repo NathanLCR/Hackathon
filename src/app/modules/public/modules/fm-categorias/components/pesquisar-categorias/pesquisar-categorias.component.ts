@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoriasServiceService } from '../../services/categorias-service.service';
 import { CategoriasModel } from '../../models/categorias-model';
+import { CategoriasService } from '../../services/categorias.service';
 
 @Component({
   selector: 'app-pesquisar-categorias',
@@ -12,13 +12,12 @@ export class PesquisarCategoriasComponent implements OnInit {
   categorias: CategoriasModel[] = [];
 
   constructor(
-    private categoriasService: CategoriasServiceService
+    private categoriasService: CategoriasService
   ) { }
 
   ngOnInit() {
-    this.categoriasService.getCategorias().subscribe(listaCategorias=>
-      {this.categorias = listaCategorias;}
-     );
+    this.categoriasService.getCategorias().subscribe(listaCategorias => { this.categorias = listaCategorias; }
+    );
   }
 
 }

@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { CategoriasModel } from '../models/categorias-model';
 
 @Injectable()
-export class CategoriasServiceService {
+export class CategoriasService {
 
   constructor(
     private http: HttpClient

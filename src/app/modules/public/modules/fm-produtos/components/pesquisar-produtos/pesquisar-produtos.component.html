@@ -1,4 +1,10 @@
 <app-container-padrao titulo="Produtos">
+  <a href="/hackathon-unifacisa/produtos/cadastro" class="d-flex flex-row-reverse success">
+    <button class="d-flex flex-row-reverse add-btn">
+      <p class="text-primary">ADICIONAR</p>
+      <i class="material-icons text-primary">add_circle</i>
+    </button>
+  </a>
   <table class="table table-striped">
     <thead>
       <tr>
@@ -16,12 +22,14 @@
         <td>{{produto.desc}}</td>
         <td>{{produto.valor | currency:'BRL':true}}</td>
         <td>
-          <button class="btn btn-danger mr-2"><i class="material-icons">
-            delete
-            </i></button>
-          <button class="btn btn-primary btn-sm">
+          <button class="btn btn-danger mr-2">
+            <i class="material-icons btn-sm">
+              delete
+            </i>
+          </button>
+          <button class="btn btn-primary">
             <i class="material-icons">
-            build
+              build
             </i>
           </button>
         </td>
