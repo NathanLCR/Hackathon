@@ -8,14 +8,13 @@ import { FormGroup, FormBuilder } from '@angular/forms';
   styleUrls: ['./cadastrar-produto.component.css']
 })
 export class CadastrarProdutoComponent implements OnInit {
-  produtos: any[];
 
   formProduto: FormGroup;
 
   constructor(
     private produtosService: ProdutosService,
     private formBuilder: FormBuilder
-    ) { }
+  ) { }
 
   ngOnInit() {
     this.createFormProduto();
@@ -23,15 +22,14 @@ export class CadastrarProdutoComponent implements OnInit {
 
   createFormProduto() {
     this.formProduto = this.formBuilder.group({
-      id:[],
-      nome:[],
-      desc:[],
-      categoriasId:[],
-      valor:[]
+      nome: [],
+      desc: [],
+      categoriasId: [],
+      valor: []
     });
   }
 
-  onSubmit(){
-    this.produtosService.cadastrar(this.formProduto.getRawValue()).subscribe()
+  onSubmit() {
+    this.produtosService.cadastrar(this.formProduto.getRawValue()).subscribe((res: any) => res);
   }
 }
